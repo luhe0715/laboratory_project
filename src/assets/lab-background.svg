@@ -1,0 +1,91 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- 实验室背景 - 简化的2.5D视图 -->
+  <defs>
+    <!-- 渐变背景 -->
+    <linearGradient id="floor" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a2e5c" />
+      <stop offset="100%" stop-color="#051a38" />
+    </linearGradient>
+    <!-- 设备光效 -->
+    <radialGradient id="deviceGlow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" stop-color="#4992ff" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#4992ff" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+  
+  <!-- 实验室地板 -->
+  <polygon points="100,450 700,450 600,550 200,550" fill="url(#floor)" stroke="#1a4980" stroke-width="2" />
+  
+  <!-- 实验室墙壁 -->
+  <polygon points="100,200 100,450 200,550 200,300" fill="#0d2744" stroke="#1a4980" stroke-width="2" />
+  <polygon points="700,200 700,450 600,550 600,300" fill="#0d2744" stroke="#1a4980" stroke-width="2" />
+  <polygon points="100,200 700,200 600,300 200,300" fill="#0f3058" stroke="#1a4980" stroke-width="2" />
+  
+  <!-- 实验设备1 - 左侧 -->
+  <g transform="translate(250, 400)">
+    <!-- 设备主体 -->
+    <rect x="-40" y="-80" width="80" height="120" fill="#0f3058" stroke="#1a4980" stroke-width="2" />
+    <!-- 设备面板 -->
+    <rect x="-30" y="-70" width="60" height="40" fill="#051a38" stroke="#3a8ee6" stroke-width="1" />
+    <!-- 设备指示灯 -->
+    <circle cx="-15" cy="-40" r="5" fill="#4992ff" />
+    <circle cx="5" cy="-40" r="5" fill="#7cffb2" />
+    <circle cx="25" cy="-40" r="5" fill="#ff6e76" />
+    <!-- 设备光效 -->
+    <circle cx="0" cy="-50" r="30" fill="url(#deviceGlow)" opacity="0.5" />
+  </g>
+  
+  <!-- 实验设备2 - 中央 -->
+  <g transform="translate(400, 420)">
+    <!-- 设备主体 -->
+    <rect x="-60" y="-100" width="120" height="140" fill="#0f3058" stroke="#1a4980" stroke-width="2" />
+    <!-- 设备面板 -->
+    <rect x="-50" y="-90" width="100" height="60" fill="#051a38" stroke="#3a8ee6" stroke-width="1" />
+    <!-- 设备指示灯 -->
+    <circle cx="-30" cy="-50" r="5" fill="#4992ff" />
+    <circle cx="0" cy="-50" r="5" fill="#7cffb2" />
+    <circle cx="30" cy="-50" r="5" fill="#ff6e76" />
+    <!-- 设备光效 -->
+    <circle cx="0" cy="-60" r="40" fill="url(#deviceGlow)" opacity="0.5" />
+    <!-- 设备连接线 -->
+    <path d="M-40,-20 H40" stroke="#3a8ee6" stroke-width="1" />
+  </g>
+  
+  <!-- 实验设备3 - 右侧 -->
+  <g transform="translate(550, 400)">
+    <!-- 设备主体 -->
+    <rect x="-40" y="-80" width="80" height="120" fill="#0f3058" stroke="#1a4980" stroke-width="2" />
+    <!-- 设备面板 -->
+    <rect x="-30" y="-70" width="60" height="40" fill="#051a38" stroke="#3a8ee6" stroke-width="1" />
+    <!-- 设备指示灯 -->
+    <circle cx="-15" cy="-40" r="5" fill="#4992ff" />
+    <circle cx="5" cy="-40" r="5" fill="#7cffb2" />
+    <circle cx="25" cy="-40" r="5" fill="#ff6e76" />
+    <!-- 设备光效 -->
+    <circle cx="0" cy="-50" r="30" fill="url(#deviceGlow)" opacity="0.5" />
+  </g>
+  
+  <!-- 顶部照明 -->
+  <g transform="translate(400, 200)">
+    <ellipse cx="0" cy="0" rx="300" ry="50" fill="none" stroke="#3a8ee6" stroke-width="1" opacity="0.3" />
+    <ellipse cx="0" cy="0" rx="250" ry="40" fill="none" stroke="#3a8ee6" stroke-width="1" opacity="0.5" />
+    <ellipse cx="0" cy="0" rx="200" ry="30" fill="none" stroke="#3a8ee6" stroke-width="1" opacity="0.7" />
+  </g>
+  
+  <!-- 地板网格 -->
+  <g opacity="0.3">
+    <line x1="150" y1="450" x2="230" y2="530" stroke="#3a8ee6" stroke-width="1" />
+    <line x1="250" y1="450" x2="330" y2="530" stroke="#3a8ee6" stroke-width="1" />
+    <line x1="350" y1="450" x2="430" y2="530" stroke="#3a8ee6" stroke-width="1" />
+    <line x1="450" y1="450" x2="530" y2="530" stroke="#3a8ee6" stroke-width="1" />
+    <line x1="550" y1="450" x2="630" y2="530" stroke="#3a8ee6" stroke-width="1" />
+    <line x1="200" y1="480" x2="600" y2="480" stroke="#3a8ee6" stroke-width="1" />
+    <line x1="200" y1="510" x2="600" y2="510" stroke="#3a8ee6" stroke-width="1" />
+  </g>
+  
+  <!-- 数据流动效果 -->
+  <g opacity="0.7">
+    <path d="M250,380 C300,350 350,370 400,350 S450,320 500,350 S550,380 600,350" stroke="#4992ff" stroke-width="1" fill="none" stroke-dasharray="5,5" />
+    <path d="M250,390 C300,360 350,380 400,360 S450,330 500,360 S550,390 600,360" stroke="#7cffb2" stroke-width="1" fill="none" stroke-dasharray="5,5" />
+  </g>
+</svg>
